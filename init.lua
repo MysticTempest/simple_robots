@@ -145,7 +145,7 @@ local function genProgrammer(pages,meta)
     local set=simple_robots.commandpages[meta:get_string("command_page")]
     --messy calculation for size
     local wid=(8/1.25)+2
-    local res="size[17,"..wid.."]"
+    local res="size[17.5,"..wid.."]"
     local pc=meta:get_int("robot_pc")
     res=res.."textlist[0,0;3,"..wid..";lines;"
     for l=1,CODELINES do
@@ -173,11 +173,11 @@ local function genProgrammer(pages,meta)
             --This deliberately acts against the auto-spacing to conserve space
             --for more commands.
             res=res.."button[8.25,"..(p+0.2)..";1,1;cmd"..p..";Set]"
-            res=res.."field[3.25,"..(p+0.2)..";5,1;msg"..p..";"..v..";]"
+            res=res.."field[3.65,"..(p+0.2)..";5,1;msg"..p..";"..v..";]"
         end
     end
-    res=res.."label[9.25,-0.25;Player Inventory]"
-    res=res.."label[9.25,4.2;Robot Inventory]"
+    res=res.."label[9.5,-0.25;Player Inventory]"
+    res=res.."label[9.5,4.2;Robot Inventory]"
     res=res.."list[current_player;main;9.25,0.25;8,4;]"
     res=res.."list[context;main;9.25,4.7;8,2;]"
 
